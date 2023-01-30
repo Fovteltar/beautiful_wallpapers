@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/LiveWallpapers/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeautifulWallpapers/app/src/main/res/drawable/ic_launcher_background.xml" value="0.163" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeautifulWallpapers/app/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/BeautifulWallpapers/app/src/main/res/layout/fragment_wallpapers_screen.xml" value="0.4854368932038835" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/CuteWallpapers/app/src/main/res/layout/activity_main.xml" value="0.23148148148148148" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/LiveWallpapers/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/LiveWallpapers/app/src/main/res/layout/content_main.xml" value="0.28888888888888886" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/LiveWallpapers/app/src/main/res/layout/fragment_wallpapers_screen.xml" value="0.33" />
       </map>
     </option>
   </component>
