@@ -46,7 +46,7 @@ class WallpapersListFragment: Fragment() {
 
         lifecycleScope.launch {
             withContext(Dispatchers.IO) {
-                Log.d("AGAIN?", "YUP")
+//                Log.d("AGAIN?", "YUP")
                 Common.retrofitService.getImageList(Common.KEY, category)
                     .enqueue( object: Callback<PixabayFullResponse> {
                         override fun onResponse(
