@@ -3,11 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/wallpapersScreenFragment">
+    app:startDestination="@id/wallpapersCategoriesFragment">
+
     <fragment
-        android:id="@+id/wallpapersScreenFragment"
-        android:name="com.example.cutewallpapers.ui.WallpapersScreenFragment"
-        android:label="WallpapersScreenFragment"
-        tools:layout="@layout/fragment_wallpapers_screen"
-    />
+        android:id="@+id/wallpapersCategoriesFragment"
+        android:name="com.example.cutewallpapers.ui.WallpapersCategoriesFragment"
+        android:label="WallpapersCategoriesFragment"
+        tools:layout="@layout/fragment_wallpapers_categories">
+        <action
+            android:id="@+id/action_wallpapersCategoriesFragment_to_wallpapersListFragment"
+            app:destination="@id/wallpapersListFragment" >
+            <argument
+                android:name="category" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallpapersListFragment"
+        android:name="com.example.cutewallpapers.ui.WallpapersListFragment"
+        android:label="WallpapersListFragment"
+        tools:layout="@layout/fragment_wallpapers_list">
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_wallpapersListFragment_to_wallpaperFullscreenFragment"
+            app:destination="@id/wallpaperFullscreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallpaperFullscreenFragment"
+        android:name="com.example.cutewallpapers.ui.WallpaperFullscreenFragment"
+        android:label="WallpaperFullscreenFragment"
+        tools:layout="@layout/fragment_wallpaper_fullscreen" >
+        <argument
+            android:name="webformatURL"
+            app:argType="string" />
+    </fragment>
 </navigation>
