@@ -3,26 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/wallpapersCategoriesFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.livewallpapers.UI.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/wallpapersCategoriesFragment"
+        android:name="com.example.cutewallpapers.ui.WallpapersCategoriesFragment"
+        android:label="WallpapersCategoriesFragment"
+        tools:layout="@layout/fragment_wallpapers_categories">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_wallpapersCategoriesFragment_to_wallpapersListFragment"
+            app:destination="@id/wallpapersListFragment" >
+            <argument
+                android:name="category" />
+        </action>
     </fragment>
-    <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.livewallpapers.UI.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
 
+    <fragment
+        android:id="@+id/wallpapersListFragment"
+        android:name="com.example.cutewallpapers.ui.WallpapersListFragment"
+        android:label="WallpapersListFragment"
+        tools:layout="@layout/fragment_wallpapers_list">
+        <argument
+            android:name="category"
+            app:argType="string" />
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_wallpapersListFragment_to_wallpaperFullscreenFragment"
+            app:destination="@id/wallpaperFullscreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wallpaperFullscreenFragment"
+        android:name="com.example.cutewallpapers.ui.WallpaperFullscreenFragment"
+        android:label="WallpaperFullscreenFragment"
+        tools:layout="@layout/fragment_wallpaper_fullscreen" >
+        <argument
+            android:name="webformatURL"
+            app:argType="string" />
     </fragment>
 </navigation>
