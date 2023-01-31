@@ -23,5 +23,5 @@
         app:icon="@drawable/ic_baseline_done_24"
         app:iconPadding="0dp"
         app:iconSize="64dp"
-        app:iconTint="@color/black" />
+        app:iconTint="@color/purple_200" />
 </FrameLayout>
